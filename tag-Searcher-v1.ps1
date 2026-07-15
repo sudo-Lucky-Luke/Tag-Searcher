@@ -4,7 +4,7 @@
 
 $File   = "C:\Temp\Config.xml"
 $Tag    = "Username"
-$Action = "Read"      # Read | Delete | Replace
+$Action = "Read"      # Read | DeleteValue | Replace | DeleteTAg
 $Value  = "Admin"     # Nur bei Replace
 
 # ==========================
@@ -19,9 +19,16 @@ switch ($Action) {
         $Nodes.InnerText
     }
 
-    "Delete" {
+    "DeleteValue" {
         foreach ($Node in $Nodes) {
             $Node.InnerText = ""
+        }
+        $Xml.Save($File)
+    }
+
+    "DeleteTAg" {
+        foreach ($Node in $Nodes) {
+            $Node.ParentNode.RemoveChild($Node) | Out-Null
         }
         $Xml.Save($File)
     }
