@@ -15,7 +15,7 @@ Edit the variables at the top of the script:
 ```powershell
 $File   = "C:\Temp\Test.xml"
 $Tag    = "Username"
-$Action = "Read"      # Read | Delete | Replace
+$Action = "Read"      # Read | DeleteValue | Replace | DeleteTAg
 $Value  = "NewValue"  # Only used with Replace
 ```
 
