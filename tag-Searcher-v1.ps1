@@ -4,7 +4,7 @@
 
 $File   = "C:\Temp\Config.xml"
 $Tag    = "Username"
-$Action = "Read"      # Read | DeleteValue | Replace | DeleteTAg
+$Action = "Read"      # Read | DeleteValue | Replace | DeleteTag
 $Value  = "Admin"     # Nur bei Replace
 
 # ==========================
